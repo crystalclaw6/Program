@@ -58,7 +58,6 @@ int main() {
 			string* current = new string[size];
 			cout << "¬ведите слова через пробел: ";
 			for (int i = 0; i < size; i++) cin >> current[i];
-			cin.get();
 			int newSize;
 			string* result = processArray(current, size, newSize);
 			printArray(current, result, size, newSize);
