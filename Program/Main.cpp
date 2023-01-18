@@ -51,6 +51,18 @@ int main() {
 			break;
 		}
 		case 2: {
+			system("cls");
+			cout << "¬ведите количество слов в массиве: ";
+			int size;
+			cin >> size;
+			string* current = new string[size];
+			cout << "¬ведите слова через пробел: ";
+			for (int i = 0; i < size; i++) cin >> current[i];
+			cin.get();
+			int newSize;
+			string* result = processArray(current, size, newSize);
+			printArray(current, result, size, newSize);
+			system("pause");
 			break;
 		}
 		case 3: {
