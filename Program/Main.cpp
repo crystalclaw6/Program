@@ -49,6 +49,7 @@ int main() {
 			result = processArray(example3, 4, newSize);
 			printArray(example3, result, 4, newSize);
 			system("pause");
+			delete[] result;
 			break;
 		}
 		case 2: {
@@ -64,6 +65,8 @@ int main() {
 			string* result = processArray(current, size, newSize);
 			printArray(current, result, size, newSize);
 			system("pause");
+			delete[] current;
+			delete[] result;
 			break;
 		}
 		case 3: {
@@ -72,4 +75,5 @@ int main() {
 		}
 		}
 	}
+
 }
