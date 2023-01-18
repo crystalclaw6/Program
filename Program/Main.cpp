@@ -1,5 +1,6 @@
 #include <iostream>
 #include <conio.h>
+#include "sstream"
 using namespace std;
 const int MAX_LENGTH = 3;
 string* processArray(string origArray[], int size, int& newSize) {
@@ -16,7 +17,7 @@ string* processArray(string origArray[], int size, int& newSize) {
 	return result;
 }
 void printArray(string example[], string result[], int size, int newSize) {
-	cout << "»значальный массив: ";
+	cout << "\n»значальный массив: ";
 	for (int i = 0; i < size; i++) {
 		cout << example[i] << " ";
 	}
@@ -24,7 +25,7 @@ void printArray(string example[], string result[], int size, int newSize) {
 	for (int i = 0; i < newSize; i++) {
 		cout << result[i] << " ";
 	}
-	cout << endl;
+	cout << "\n";
 }
 int main() {
 	setlocale(LC_ALL, "");
@@ -52,12 +53,13 @@ int main() {
 		}
 		case 2: {
 			system("cls");
-			cout << "¬ведите количество слов в массиве: ";
+			cout << "¬ведите количество слов в массиве:";
 			int size;
 			cin >> size;
+			cin.get();
 			string* current = new string[size];
-			cout << "¬ведите слова через пробел: ";
-			for (int i = 0; i < size; i++) cin >> current[i];
+			cout << "\n¬ведите элементы:\n";
+			for (int i = 0; i < size; i++) { cout << "[" << i + 1 << "] - "; getline(cin, current[i]); }
 			int newSize;
 			string* result = processArray(current, size, newSize);
 			printArray(current, result, size, newSize);
