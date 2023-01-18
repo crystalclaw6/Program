@@ -57,7 +57,7 @@ int main() {
 			int size;
 			cin >> size;
 			cin.get();
-			string* current = new string[size];
+			string* current = new string[size]; 
 			cout << "\n¬ведите элементы:\n";
 			for (int i = 0; i < size; i++) { cout << "[" << i + 1 << "] - "; getline(cin, current[i]); }
 			int newSize;
